@@ -1,0 +1,16 @@
+const Obj = {
+	ObjC : function(x:number,y:bool) {
+		return {n:x,b:y};
+	},
+
+	n:2,
+
+	isTrue : function(obj: {n:number;b:bool}):string {
+		const r = obj.b ? "true" : "false";
+		return r;
+	}
+}
+
+console.log(Obj.isTrue(Obj.ObjC(1,true)));
+
+Obj.isTrue({n:2,b:false});
